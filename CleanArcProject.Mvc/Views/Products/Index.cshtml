@@ -1,0 +1,29 @@
+﻿@using CleanArcProject.Domain.ViewModel;
+@model IEnumerable<ProductsListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    int counter = 1;
+}
+
+<h1>Index</h1>
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>CategoryName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@counter</td>
+                <td>@item.Name</td>
+                <td>@item.CategoryName</td>
+            </tr>
+            counter++;
+        }
+    </tbody>
+</table>
+
